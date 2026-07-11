@@ -1,22 +1,34 @@
 import {PromoPotus1, PromoIcon, SingonioIcon, PotusIcon, MonsteraIcon} from "../assets/images";
 import {Truck, Card, Plant} from "../assets/icons";
-
-var categories = [
+import {useEffect} from "react";
+import { useHeader } from "../contexts/HeaderContext";
+const categories = [
   {name: "Ofertas", icon: PromoIcon},
   {name: "Singonio", icon: SingonioIcon},
   {name: "Potus", icon: PotusIcon},
   {name: "Monstera", icon: MonsteraIcon},
   {name: "Singonio", icon: SingonioIcon}
 ]
-var features = [
+const features = [
   {name: "Envios a San Luis y Villa Mercedes", icon: Truck},
   {name: "Diferentes medios de pago", icon: Card},
   {name: "Cultivadas Localmente", icon: Plant}
 ]
 
 export default function Home() {
+  const { configureHeader } = useHeader();
+
+  useEffect(() => {
+    configureHeader({
+      placeholder: "Buscar Entre Hojas",
+      showBackButton: false,
+      showShadow: false,
+    });
+  }, []);
+
+
   return (
-    <main className="z-0 bg-bg-light h-svh min-w-screen flex flex-col items-center  text-white">
+    <main className="bg-bg-light h-[calc(100svh-3rem)] min-w-screen flex flex-col items-center  text-white">
       <div className="bg-[linear-gradient(to_bottom,#A8C09A_0%,#A8C09A_40%,#F5F1E8_100%)] h-63 w-screen absolute z-0"></div>
       <section className="flex z-10 w-[95%] h-65 bg-bg mt-2 rounded-md shadow-md">
         <div className="flex flex-col items-center justify-between w-[45%]">
@@ -25,7 +37,7 @@ export default function Home() {
             <span className="text-lg font-Manrope text-black">Llevate 3</span>
           </div>
           <div className="flex flex-col  h-7/12">
-            <span className="text-lg font-Manrope text-black/50 ">$ 20.000 </span>
+            <span className="text-lg font-Manrope text-black/50 line-through ">$ 20.000 </span>
             <span className="text-4xl font-Manrope text-black text-shadow-sm">$ 18.000</span>
             <span className="text-xl font-Outfit bg-primary-dark color-bg w-fit px-2 mt-4 shadow-md">10% OFF</span>
           </div>
