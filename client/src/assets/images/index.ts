@@ -1,0 +1,6 @@
+export {default as Logo} from "./Logo.png"
+export {default as PromoPotus1} from "./PromoPotus1.png"
+export {default as PotusIcon} from "./PotusIcon.png"
+export {default as SingonioIcon} from "./SingonioIcon.png"
+export {default as MonsteraIcon} from "./MonsteraIcon.png"
+export {default as PromoIcon} from "./PromoIcon.png"
