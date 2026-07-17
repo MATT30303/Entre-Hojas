@@ -1,4 +1,4 @@
-import {PromoPotus1, PromoIcon, SingonioIcon, PotusIcon, MonsteraIcon} from "../assets/images";
+import {PromoPotus1, PromoIcon, SingonioIcon, PotusIcon, MonsteraIcon, CalatheaIcon, MarantaIcon, PhilodendroIcon, AnturioIcon} from "../assets/images";
 import {Truck, Card, Plant} from "../assets/icons";
 import {useEffect} from "react";
 import { useHeader } from "../contexts/HeaderContext";
@@ -7,7 +7,10 @@ const categories = [
   {name: "Singonio", icon: SingonioIcon},
   {name: "Potus", icon: PotusIcon},
   {name: "Monstera", icon: MonsteraIcon},
-  {name: "Singonio", icon: SingonioIcon}
+  {name: "Maranta", icon: MarantaIcon},
+  {name: "Calathea", icon: CalatheaIcon},
+  {name: "Philodendro", icon: PhilodendroIcon},
+  {name: "Anturio", icon: AnturioIcon},
 ]
 const features = [
   {name: "Envios a San Luis y Villa Mercedes", icon: Truck},
@@ -46,7 +49,7 @@ export default function Home() {
           <img src={PromoPotus1} alt="Promo Potus 1" className="h-full rounded-r-md object-cover object-[35%_center]"/>
         </div>
       </section>
-      <section className="flex overflow-scroll scrollbar-none  gap-7 w-full h-fit p-2">
+      <section className="flex overflow-scroll scrollbar-none  gap-7 w-screen h-fit p-2">
         {categories.map((category, index) => (
           <div key={index} className="flex flex-col items-center gap-0">
             <img src={category.icon} alt={category.name} className="w-20 h-20 object-contain"/>

@@ -18,6 +18,22 @@ export const router = createBrowserRouter([
         element: <Category />,
       },
       {
+        path: "/categories/Anturio",
+        element: <ProductList family="Anturio"/>,
+      },
+      {
+        path: "/categories/Calathea",
+        element: <ProductList family="Calathea"/>,
+      },
+      {
+        path: "/categories/Maranta",
+        element: <ProductList family="Maranta"/>,
+      },
+      {
+        path: "/categories/Monstera",
+        element: <ProductList family="Monstera"/>,
+      },
+      {
         path: "/categories/Potus",
         element: <ProductList family="Potus"/>,
       },

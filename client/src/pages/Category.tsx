@@ -16,10 +16,14 @@ export default function Category() {
 
   const categories = [
     { name: "Ofertas", amount: 0 },
-    { name: "Singonio", amount: 5, path: "/categories/Singonio" },
+    { name: "Anturio", amount: 1, path: "/categories/Anturio"  },
+    { name: "Calathea", amount: 1, path: "/categories/Calathea"  },
+    { name: "Maranta", amount: 2, path: "/categories/Maranta"  },
+    { name: "Monstera", amount: 2, path: "/categories/Monstera"  },
+    { name: "Philodendro", amount: 0, },
     { name: "Potus", amount: 5, path: "/categories/Potus" },
-    { name: "Monstera", amount: 2 },
-    { name: "Todo", amount: 12 },
+    { name: "Singonio", amount: 5, path: "/categories/Singonio" },
+    { name: "Todo", amount: 16 },
   ]
 
   const handleCategories = (path?: string) => {
