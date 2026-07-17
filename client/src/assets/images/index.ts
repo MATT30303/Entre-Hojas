@@ -15,7 +15,7 @@ export {default as MonsteraIcon} from "./monstera/MonsteraIcon.webp"
 export {default as MonsteraAdansonii} from "./monstera/MonsteraAdansonii.webp"
 export {default as MonsteraDeliciosa} from "./monstera/MonsteraDeliciosa.webp"
 
-export {default as Philodentro} from "./philodentro/PhilodentronIcon.webp"
+export {default as PhilodendroIcon} from "./philodendro/PhilodendronIcon.webp"
 
 export {default as PotusIcon} from "./potus/PotusIcon.webp"
 export {default as PotusComun} from "./potus/PotusComun.webp"
