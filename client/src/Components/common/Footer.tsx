@@ -25,7 +25,7 @@ const items = [
 
 export default function Footer() {
   return (
-    <footer className="bg-bg h-15 w-full fixed inset-x-0 bottom-0 border-t border-t-black/70">
+    <footer className="bg-bg h-15 w-full fixed z-20 inset-x-0 bottom-0 border-t border-t-black/70">
         <div className="flex flex-row justify-around items-center h-full">
             {items.map(({ label, path, icon: Icon }) => (
                 <NavLink

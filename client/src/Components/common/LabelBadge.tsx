@@ -29,6 +29,6 @@ export default function LabelBadge({label}:{label:string}) {
   }
 
   return (
-    <div className='absolute w-full bottom-16'>{label === "oferta"? labelPromo() : label === "ultimo"? labelLasts() : label === "top" ? labelMostSold() : null}</div>
+    <div className='absolute w-full bottom-16 z-10'>{label === "oferta"? labelPromo() : label === "ultimo"? labelLasts() : label === "top" ? labelMostSold() : null}</div>
   )
 }
