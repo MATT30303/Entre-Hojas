@@ -57,9 +57,9 @@ class PlantaModel extends BaseModel<Planta> {
         0 AS \`discount\`,
         COALESCE(p.\`etiqueta\`, '') AS \`label\`
       FROM \`plantas\` AS p
-      WHERE p.\`familia\` = ?
+      WHERE (? = 'AllPlants' OR p.\`familia\` = ?)
       ORDER BY p.\`nombre\``,
-      [familia],
+      [familia, familia],
     );
     return plantas as PlantaResumen[];
   }
