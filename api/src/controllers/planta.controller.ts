@@ -5,7 +5,7 @@ import { HttpError } from "../utils/http-error.js";
 import { parseId } from "../utils/request.js";
 import type { Planta } from "../models/planta.model.js";
 
-const plantFields = ["nombre", "familia", "precio", "stock", "etiqueta", "origen", "tipo", "iluminacion", "resistencia", "tamano", "cuidado", "descripcion"] as const satisfies readonly (keyof Planta & string)[];
+const plantFields = ["nombre", "familia", "precio", "discount", "stock", "etiqueta", "origen", "tipo", "iluminacion", "resistencia", "tamano", "cuidado", "descripcion"] as const satisfies readonly (keyof Planta & string)[];
 const crudController = createCrudController(plantaService, plantFields, ["nombre", "precio", "stock"]);
 
 export default {

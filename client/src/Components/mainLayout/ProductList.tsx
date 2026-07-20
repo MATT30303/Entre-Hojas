@@ -63,7 +63,7 @@ export default function ProductList({ family }: { family: string }) {
       {!isLoading && !error && (
         <article className="grid grid-cols-2 w-11/12 justify-center items-center place-items-center mx-auto gap-2 bg-bg-light mt-4 pb-30">
           {list.map((plant) => (
-            <div key={plant.id} className="w-full max-w-45 h-55 mb-3 relative bg-[linear-gradient(to_top,#F2EBE3_0%,#F2EBE3_25%,#D8CAB8_100%)] flex flex-col shadow-lg rounded-md">
+            <div key={plant.id} className="w-full max-w-45 h-55 mb-3 relative bg-[linear-gradient(to_top,#F2EBE3_0%,#F2EBE3_25%,#D8CAB8_100%)] flex flex-col shadow-lg rounded-md cursor-pointer hover:shadow-2xl transition duration-300 ease-in-out">
               <LabelBadge label={plant.label} />
               {plant.image && <img src={Images[plant.image as keyof typeof Images]} alt={plant.name} className="z-0 max-h-9/12 object-contain" />}
               <div className="absolute bottom-0 left-0 flex flex-col px-2 pb-1 text-shadow-xs font-light">

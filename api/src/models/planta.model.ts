@@ -3,7 +3,7 @@ import type { RowDataPacket } from "mysql2";
 import pool from "../config/database.js";
 
 export interface Planta {
-  id: number; nombre: string; familia: string | null; precio: number; stock: number;
+  id: number; nombre: string; familia: string | null; precio: number; discount: number; stock: number;
   etiqueta: string | null; origen: string | null; tipo: string | null; iluminacion: string | null;
   resistencia: string | null; tamano: string | null; cuidado: string | null; descripcion: string | null;
 }
@@ -54,7 +54,7 @@ class PlantaModel extends BaseModel<Planta> {
           ORDER BY i.\`id\`
           LIMIT 1
         ) AS \`image\`,
-        0 AS \`discount\`,
+        COALESCE(p.\`discount\`, 0) AS \`discount\`,
         COALESCE(p.\`etiqueta\`, '') AS \`label\`
       FROM \`plantas\` AS p
       WHERE (? = 'AllPlants' OR p.\`familia\` = ?)
@@ -65,7 +65,7 @@ class PlantaModel extends BaseModel<Planta> {
   }
 
   protected readonly table = "plantas";
-  protected readonly fields = ["nombre", "familia", "precio", "stock", "etiqueta", "origen", "tipo", "iluminacion", "resistencia", "tamano", "cuidado", "descripcion"] as const;
+  protected readonly fields = ["nombre", "familia", "precio", "discount", "stock", "etiqueta", "origen", "tipo", "iluminacion", "resistencia", "tamano", "cuidado", "descripcion"] as const;
 }
 
 export default new PlantaModel();

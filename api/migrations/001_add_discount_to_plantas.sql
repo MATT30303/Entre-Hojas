@@ -1,0 +1,2 @@
+ALTER TABLE `plantas`
+  ADD COLUMN `discount` TINYINT UNSIGNED NOT NULL DEFAULT 0 AFTER `precio`;
