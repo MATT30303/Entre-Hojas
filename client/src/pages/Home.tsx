@@ -3,7 +3,7 @@ import {Truck, Card, Plant} from "../assets/icons";
 import {useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 import { useHeader } from "../contexts/HeaderContext";
-import { ProductList } from "../Components/categories";
+import { ProductList } from "../Components/mainLayout";
 const categories = [
   {name: "Ofertas", icon: PromoIcon, path: "./categories/Ofertas"},
   {name: "Singonio", icon: SingonioIcon, path: "/categories/Singonio"},
@@ -29,6 +29,9 @@ export default function Home() {
       placeholder: "Buscar Entre Hojas",
       showBackButton: false,
       showShadow: false,
+      showSearch: true,
+      showShare: false,
+      showHeader: true,
     });
   }, []);
 
