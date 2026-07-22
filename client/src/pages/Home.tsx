@@ -30,7 +30,8 @@ export default function Home() {
       showBackButton: false,
       showShadow: false,
       showSearch: true,
-      showShare: false
+      showShare: false,
+      showHeader: true,
     });
   }, []);
 

@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import * as Images from "../../assets/images"
 import {PlantDetail} from "./"
 import { DiscountBadge, LabelBadge } from "../common";
-import { useParams } from "react-router-dom";
-
+import { useNavigate, useParams } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 export interface Plant {
   id: number;
   name: string;
@@ -17,7 +17,8 @@ export interface Plant {
 const API_BASE_URL = import.meta.env.VITE_API_URL ?? "http://localhost:3000";
 
 export default function ProductList({family}:{family?:string}) {
-  
+  const navigate = useNavigate();
+
   const {family : familyParam} = useParams();
   const [list, setList] = useState<Plant[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -57,8 +58,8 @@ export default function ProductList({family}:{family?:string}) {
 
   const title = selectedFamily === "AllPlants" ? "" : selectedFamily === "Offers" ? "Ofertas" : selectedFamily;
 
-  const handlePlant = (id:number) =>{
-    <PlantDetail id={id} />
+  const handleNavigate = (id:number) =>{
+    id? navigate(`/detalle/${id}`) : null
   }
 
   return (
@@ -71,7 +72,7 @@ export default function ProductList({family}:{family?:string}) {
       {!isLoading && !error && (
         <article className="grid grid-cols-2 w-11/12 justify-center items-center place-items-center mx-auto gap-2 bg-bg-light mt-4 pb-30">
           {list.map((plant) => (
-            <div key={plant.id} onClick={()=>{handlePlant(plant.id)}}
+            <div key={plant.id} onClick={()=>{handleNavigate(plant.id)}}
             className="w-full max-w-45 h-55 mb-3 relative bg-[linear-gradient(to_top,#F2EBE3_0%,#F2EBE3_25%,#D8CAB8_100%)] flex flex-col shadow-lg rounded-md cursor-pointer hover:shadow-2xl transition duration-300 ease-in-out">
               <LabelBadge label={plant.label} />
               {plant.image && <img src={Images[plant.image as keyof typeof Images]} alt={plant.name} className="z-0 max-h-9/12 object-contain" />}

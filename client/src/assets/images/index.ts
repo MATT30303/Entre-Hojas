@@ -13,6 +13,8 @@ export {default as MarantaLeuconeura} from "./maranta/MarantaLeuconeura.webp"
 
 export {default as MonsteraIcon} from "./monstera/MonsteraIcon.webp"
 export {default as MonsteraAdansonii} from "./monstera/MonsteraAdansonii.webp"
+export {default as MonsteraAdansonii1} from "./monstera/MonsteraAdansonii1.webp"
+export {default as MonsteraAdansonii2} from "./monstera/MonsteraAdansonii2.webp"
 export {default as MonsteraDeliciosa} from "./monstera/MonsteraDeliciosa.webp"
 
 export {default as PhilodendroIcon} from "./philodendro/PhilodendronIcon.webp"
