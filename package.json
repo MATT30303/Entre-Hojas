@@ -1,0 +1,26 @@
+{
+  "name": "entre-hojas",
+  "version": "1.0.0",
+  "description": "**Entre Hojas** es una aplicación web desarrollada para un vivero especializado en plantas de interior.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"pnpm --filter api dev\" \"pnpm --filter client dev\""
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FabianDev033/Entre-Hojas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/FabianDev033/Entre-Hojas/issues"
+  },
+  "homepage": "https://github.com/FabianDev033/Entre-Hojas#readme",
+  "devDependencies": {
+    "concurrently": "^10.0.3"
+  }
+}
